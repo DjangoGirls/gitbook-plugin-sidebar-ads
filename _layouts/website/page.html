@@ -1,0 +1,22 @@
+{% extends template.self %}
+
+{% block book_sidebar %}
+  {{ super() }}
+  <div class="sidebar-ad">
+      {% if config.pluginsConfig['sidebar-ad'].url %}
+        <a href="{{ config.pluginsConfig['sidebar-ad'].url }}" target="_blank">
+      {% endif %}
+        <img src="{{ config.pluginsConfig['sidebar-ad'].imageUrl }}" />
+      {% if config.pluginsConfig['sidebar-ad'].url %}
+        </a>
+      {% endif %}
+      {% if config.pluginsConfig['sidebar-ad'].description %}
+        <p>{{ config.pluginsConfig['sidebar-ad'].description }}</p>
+      {% endif %}
+      {% if config.pluginsConfig['sidebar-ad'].btnText %}
+      <a href="{{ config.pluginsConfig['sidebar-ad'].url }}" class="btn" target="_blank">
+        {{ config.pluginsConfig['sidebar-ad'].btnText }}
+      </a>
+      {% endif %}
+  </div>
+{% endblock %}

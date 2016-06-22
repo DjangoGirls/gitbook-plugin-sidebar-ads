@@ -1,0 +1,29 @@
+{
+    "name": "gitbook-plugin-sidebar-ad",
+    "version": "0.0.1",
+    "description": "GitBook plugin for adding a small ad in the sidebar of your book",
+    "engines": {
+        "gitbook": ">=3.0.0"
+    },
+    "gitbook": {
+        "properties": {
+            "imageUrl": {
+                "type": "string",
+                "description": "URL to image displayed in the ad",
+                "required": true
+            },
+            "url": {
+                "type": "string",
+                "description": "Promoted URL"
+            },
+            "description": {
+                "type": "string",
+                "description": "Description next to the image"
+            },
+            "btnText": {
+                "type": "string",
+                "description": "Text for the call to action button"
+            }
+        }
+    }
+}
