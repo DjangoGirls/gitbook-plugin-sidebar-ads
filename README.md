@@ -4,7 +4,9 @@ Add a nice sidebar ad to your GitBook.
 
 ## Example:
 
-[Example](http://i.imgur.com/K3HPXzm.png)
+![Example](http://i.imgur.com/K3HPXzm.png)
+
+[See demo](https://tutorial.djangogirls.org/en/)
 
 ## How to use it:
 
