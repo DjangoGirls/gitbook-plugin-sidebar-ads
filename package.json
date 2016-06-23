@@ -1,6 +1,6 @@
 {
     "name": "gitbook-plugin-sidebar-ad",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "GitBook plugin for adding a small ad in the sidebar of your book",
     "engines": {
         "gitbook": ">=3.0.0"
