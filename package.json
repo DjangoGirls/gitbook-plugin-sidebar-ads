@@ -1,34 +1,57 @@
 {
-    "name": "gitbook-plugin-sidebar-ad",
+    "name": "gitbook-plugin-sidebar-ads",
     "version": "0.0.4",
-    "description": "GitBook plugin for adding a small ad in the sidebar of your book",
+    "description": "GitBook plugin for adding small ads with a carousel in the sidebar of your book",
     "engines": {
         "gitbook": ">=3.0.0"
     },
     "license": "BSD",
     "repository": {
       "type": "git",
-      "url": "https://github.com/olasitarska/gitbook-plugin-sidebar-ad.git"
+      "url": "https://github.com/djangogirls/gitbook-plugin-sidebar-ads.git"
     },
     "gitbook": {
         "properties": {
-            "imageUrl": {
-                "type": "string",
-                "description": "URL to image displayed in the ad",
-                "required": true
+            "your-ad": {
+                "imageUrl": {
+                    "type": "string",
+                    "description": "URL to image displayed in the ad",
+                    "required": true
+                },
+                "url": {
+                    "type": "string",
+                    "description": "Promoted URL"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description next to the image"
+                },
+                "btnText": {
+                    "type": "string",
+                    "description": "Text for the call to action button"
+                }
             },
-            "url": {
-                "type": "string",
-                "description": "Promoted URL"
-            },
-            "description": {
-                "type": "string",
-                "description": "Description next to the image"
-            },
-            "btnText": {
-                "type": "string",
-                "description": "Text for the call to action button"
-            }
+            "sponsor-ads": [
+                {
+                    "imageUrl": {
+                        "type": "string",
+                        "description": "URL to image displayed in the ad",
+                        "required": true
+                    },
+                    "url": {
+                        "type": "string",
+                        "description": "Promoted URL"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Description next to the image"
+                    },
+                    "btnText": {
+                        "type": "string",
+                        "description": "Text for the call to action button"
+                    }
+                }
+            ]
         }
     }
 }

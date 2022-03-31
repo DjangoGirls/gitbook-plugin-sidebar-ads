@@ -2,7 +2,7 @@ module.exports = {
   book: {
     assets: './assets',
     css: [
-      'sidebar-ad.css'
+      'sidebar-ads.css',
     ]
   },
 };
