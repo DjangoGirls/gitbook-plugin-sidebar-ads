@@ -8,7 +8,7 @@ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+
 {% block book_sidebar %}
   {{ super() }}
   <div class="sidebar-addition">
-    {% if config.pluginsConfig['sidebar-ads'] %}  
+    {% if config.pluginsConfig['sidebar-ads'].ads %}  
     <div id="carouselAd" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselAd" data-bs-slide-to="0" class="active" aria-current="true" ></button>
@@ -17,25 +17,8 @@ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+
         <button type="button" data-bs-target="#carouselAd" data-bs-slide-to="{{ i }}"></button>
         {% endfor %}
       </div>
-      <div class="carousel-inner">     
-        <div class="carousel-item active">
-          {% if config.pluginsConfig['sidebar-ads'].patreon.url %}
-          <a href="{{ config.pluginsConfig['sidebar-ads'].patreon.url }}" target="_blank">
-          {% endif %} 
-          <img src="{{ config.pluginsConfig['sidebar-ads'].patreon.imageUrl }}">
-          {% if config.pluginsConfig['sidebar-ads'].patreon.url %}
-          </a> {% endif %}
-          {% if config.pluginsConfig['sidebar-ads'].patreon.description %}
-            <p>{{ config.pluginsConfig['sidebar-ads'].patreon.description }}</p>
-          {% endif %}
-          {% if config.pluginsConfig['sidebar-ads'].patreon.btnText %}
-            <a href="{{ config.pluginsConfig['sidebar-ads'].patreon.url }}" class="btn" target="_blank">
-            {{ config.pluginsConfig['sidebar-ads'].patreon.btnText }}
-            </a>
-          {% endif %}
-        </div>  
-        {% if config.pluginsConfig['sidebar-ads.sponsors-ads'] %}
-        {% for ad in config.pluginsConfig['sidebar-ads.sponsor-ads'] %}
+      <div class="carousel-inner">
+        {% for ad in config.pluginsConfig['sidebar-ads'].ads %}
         <div class="carousel-item">
           {% if ad.url %}
             <a href="{{ ad.url }}" target="_blank">
@@ -54,7 +37,6 @@ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+
           {% endif %} 
         </div>
         {% endfor %}
-        {% endif %}
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselAd" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -67,13 +49,6 @@ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+
     </div>
     {% endif %}
   </div>
-
-  <script>
-    var array = new Array();
-    for (i = 1; i <= config.pluginsConfig['sidebar-ads.sponsor-ads'].length; i++){
-      array[i]
-    }
-  </script>
 
 {% endblock %}
 
