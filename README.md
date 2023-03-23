@@ -17,21 +17,21 @@ Add this to your "book.json":
     "plugins": ["sidebar-ads"],
     "pluginsConfig": {
         "sidebar-ads": {
-            "your-ad'": {
-                "imageUrl": "http://i.imgur.com/K3HPXzm.png", // Url to your ad
-                "url": "http://google.com/", // Url that image will be linked to, optional
-                "description": "text", // Text next to the add, optional
-                "btnText": "Buy me!" // Text for the Call to Action button, optional
-            },
-            "sponsor-ads" : [
+            "ads": [
                 {
-                    "imageUrl": "http://i.imgur.com/K3HPXzm.png", // Url to your sponsor ad
-                    "url": "http://google.com/", // Url that image will be linked to, optional
-                    "description": "text", // Text next to the add, optional
-                    "btnText": "Buy me again!" // Text for the Call to Action button, optional
-                }
+                    "imageUrl": "https://i.imgur.com/K3HPXzm.png",
+                    "url": "http://google.com/",
+                    "description": "text",
+                    "btnText": "Buy me again!"
+                },
+                {
+                    "imageUrl": "https://i.imgur.com/K3HPXzm.png",
+                    "url": "http://google.com/",
+                    "description": "text",
+                    "btnText": "Buy me again!"
+                },
             ]
-        }
+        },
     }
 }
 ```
