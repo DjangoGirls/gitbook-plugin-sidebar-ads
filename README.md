@@ -38,4 +38,4 @@ Add this to your "book.json":
 
 ## License
 
-BSD
+BSD-2-Clause
